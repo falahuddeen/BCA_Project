@@ -1,0 +1,29 @@
+{% extends 'temp/Admin home page.html' %}
+{% block base %}
+<head>
+    <title>User Details View</title>
+</head>
+<body>
+<table align="center" class="table table-bordered text-center">
+	<tr>
+		<td>Name</td>
+        <td>User ID</td>
+		<td>Phone Number</td>
+		<td>E_Mail</td>
+		<td>Adhaar Number</td>
+        <td colspan="2">Status</td>
+	</tr>
+    {% for x in obval1 %}
+	<tr>
+		<td>{{ x.username}}</td>
+		<td>{{ x.u_id }}</td>
+		<td>{{ x.phone_number }}</td>
+		<td>{{ x.e_mail }}</td>
+        <td>{{ x.adhaar_number }}</td>
+        <td class="btn btn-success"><a href="{% url 'acc' idd=x.u_id %}" >verify</a></td>
+		<td class="btn btn-success"><a href="{% url 'rejj' idd=x.u_id %}">decline</a></td>
+	</tr>
+     {% endfor %}
+</table>
+</body>
+{% endblock %}

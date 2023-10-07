@@ -1,0 +1,94 @@
+{#{% extends 'temp/User home page.html' %}#}
+{% block base %}
+    <br>
+    <br>
+    <br>
+     <br>
+    <br>
+    <br>
+    <div align="center" class="s">
+    <style>
+        .s{
+            background-color: #8fd19e;
+        }
+        </style>
+        <br>
+        <br>
+	<h1>User Registretion Form</h1>
+    <form method="post">
+        {% csrf_token %}
+	<table>
+		<tr>
+			<td>
+				Username : 
+			</td>
+			<td>
+				<input type="text" name="username" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Phone Number : 
+			</td>
+			<td>
+				<input type="tel" name="userphone" pattern="[0-9]{10}" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				E-mail :
+			</td>
+			<td>
+				<input type="email" name="useremail" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Gender :
+			</td>
+			<td>
+                <input type="radio" name="gender" value="male">  Male
+               <input type="radio" name="gender" value="female">  Female</td>
+		</tr>
+
+		<tr>
+			<td>
+			    Password : 
+		    </td>
+		    <td>
+			    <input type="password" name="userpassword" required="">
+		    </td>
+	    </tr>
+	    <tr>
+		    <td>
+			    Confirm Password : 
+		    </td>
+		    <td>
+			    <input type="text" name="userpassword" required="">
+		    </td>
+	    </tr>
+        <tr>
+		    <td>
+			    Adhaar Number :
+		    </td>
+		    <td>
+			    <input type="text" name="adhaarnum" pattern="[0-9]{12}" required="">
+		    </td>
+	    </tr>
+	</table><br>
+{% if okk %}
+        <script>
+            alert("{{ okk }}")
+        </script>
+        {% endif %}
+	<input type="submit" name="usersubmit" value="Register">
+    </form>
+      <br>
+    <br>
+        <a href="/temp/main_home/">GO BACK</a>
+    <br>
+     <br>
+    <br>
+    <br>
+    </div>
+{% endblock %}
