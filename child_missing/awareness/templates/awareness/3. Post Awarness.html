@@ -1,0 +1,21 @@
+{% extends 'temp/Police Station home page.html' %}
+{% block base %}
+<body>
+	<center>
+        <h1><b>Post Awarness</b></h1>
+		<form method="post">
+            {% csrf_token %}
+			<table>
+				<tr>
+					<td>
+						Awarness :
+					</td>
+					<td rowspan="3">
+						<input type="text" class="form-control"name="awarnesspost" required>
+					</td>
+				</tr>
+			</table><br>
+			<input type="submit" class="btn-danger" name="awarnesssubmit" value="Post">
+		</form>
+	</center>
+{% endblock %}

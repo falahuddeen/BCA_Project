@@ -1,0 +1,22 @@
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<html>
+<center>
+<h3>VIEW AWARNESS</h3>
+<table border="2">
+	<tr>
+		<td>Awarness</td>
+		<td>Date</td>
+		<td>Po_id</td>
+	</tr>
+    {% for x in obval %}
+	<tr>
+		<td>{{ x.awareness }}</td>
+		<td>{{ x.date }}</td>
+		<td>{{ x.po_id }}</td>
+	</tr>
+    {% endfor %}
+</table>
+</center>
+{#{% endblock %}#}
+</html>
