@@ -1,0 +1,26 @@
+<html>
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<center>
+<h3><b>VIEW CHILD LOCATION</b></h3>
+<table border="2">
+	<tr>
+		<td>Mi_id</td>
+		<td>Location</td>
+		<td>Date</td>
+		<td>Time</td>
+        <td>Status</td>
+	</tr>
+    {% for x in obval %}
+	<tr>
+		<td>{{ x.mi_id }}</td>
+		<td>{{ x.location }}</td>
+		<td>{{ x.date }}</td>
+		<td>{{ x.time }}</td>
+        <td>{{ x.status }}</td>
+	</tr>
+     {% endfor %}
+</table>
+</center>
+{#{% endblock %}#}
+</html>

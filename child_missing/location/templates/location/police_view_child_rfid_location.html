@@ -1,0 +1,24 @@
+{% extends 'temp/Police Station home page.html' %}
+{% block base %}
+    <h3><b>UPDATED RFID CHILD LOCATION</b></h3>
+    <div class="container">
+<table align="center" class="table table-bordered text-center">
+	<tr>
+		<td>Missing_child_id</td>
+        <td>Time</td>
+        <td>Date</td>
+		<td>Location</td>
+
+
+	</tr>
+    {% for x in obval1 %}
+	<tr>
+		<td>{{ x.missing_child_id}}</td>
+		<td>{{ x.passed_time }}</td>
+		<td>{{ x.passed_date }}</td>
+		<td>{{ x.passed_location }}</td>
+	</tr>
+     {% endfor %}
+</table>
+</div>
+{% endblock %}

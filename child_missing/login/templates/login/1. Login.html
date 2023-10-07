@@ -1,0 +1,52 @@
+{% extends 'temp/main home page.html' %}
+{% block base %}
+	<center>
+	<form method="post">
+     {% csrf_token %}
+        <h1><b>LOGIN</b></h1>
+		<table>
+			<tr>
+				<td>
+					Username : 
+				</td>
+				<td>
+					<input type="text" name="loginusername" required="">
+				</td>
+			</tr>
+            <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+			<tr>
+			    <td>
+				    Password : 
+			    </td>
+			    <td>
+			    	<input type="password" name="loginpassword" required="">
+			    </td>
+		    </tr>
+            <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+		    <tr>
+		    	<td align="right">
+		    		<input type="submit" class="btn-danger" name="loginsubmit" value="Login">
+		    	</td>
+		    	<td align="center">
+		    		<a href="signupmethod.html" class="btn-success">Signup</a>
+		    	</td>
+		    </tr>
+		</table><br>
+        {% if msg %}
+    <script>
+        alert("{{ msg }}")
+    </script>
+{% endif %}
+
+
+	</form>
+    </center>
+{% endblock %}
