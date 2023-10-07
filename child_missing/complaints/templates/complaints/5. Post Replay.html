@@ -1,0 +1,21 @@
+{% extends 'temp/Police Station home page.html' %}
+{% block base %}
+	<center>
+        <h1><b>Post Replay</b></h1>
+        <form method="POST">
+            {% csrf_token %}
+		<table>
+			<tr>
+				<td>
+					Replay :
+				</td>
+				<td>
+					<input type="text" name="postreplay" required>
+				</td>
+			</tr>
+		</table><br>
+            		<input type="submit" class="btn-danger" name="postsubmit" value="Post">
+
+        </form>
+	</center>
+{% endblock %}

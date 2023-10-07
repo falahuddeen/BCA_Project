@@ -1,0 +1,23 @@
+<html>
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<center>
+    <h1><b>Post Complaint</b></h1>
+    <form method="post">
+        {% csrf_token %}
+	<table>
+		<tr>
+			<td>
+				Complaint : 
+			</td>
+			<td>
+				<input type="text" name="postcomplaint" required>
+			</td>
+		</tr>
+	</table><br>
+
+	<input type="submit" name="postcomplaintsubmit" value="Report">
+    </form>
+</center>
+{#{% endblock %}#}
+</html>

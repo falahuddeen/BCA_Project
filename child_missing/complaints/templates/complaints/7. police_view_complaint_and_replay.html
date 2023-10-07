@@ -1,0 +1,35 @@
+{% extends 'temp/Police Station home page.html' %}
+{% block base %}
+    <h3 align="center"><b>VIEW COMPLAINT AND REPLY</b></h3>
+    <div class="container">
+<table align="center" class="table table-bordered text-center">
+	<tr>
+        <td>Name</td>
+        <td>U_id</td>
+        <td>Mobile_number</td>
+        <td>Adhaar Number</td>
+		<td>Complaint</td>
+        <td>Reply</td>
+		<td>Date</td>
+		<td>Time</td>
+
+		<td></td>
+	</tr>
+    {% for x in obval %}
+
+	<tr>
+		<td>{{ x.u.username}}</td>
+		<td>{{ x.u.u_id }}</td>
+		<td>{{ x.u.phone_number }}</td>
+		<td>{{ x.u.adhaar_number }}</td>
+        <td>{{ x.complaint}}</td>
+        <td>{{ x.replay}}</td>
+        <td>{{ x.date}}</td>
+        <td>{{ x.time}}</td>
+		<td class="btn btn-success"><a href="{% url 'post_replay' idd=x.c_id %}">Reply</a></td>
+{#        <td><a href="/compl/post_replay/">Replay</a></td>#}
+	</tr>
+     {% endfor %}
+</table>
+    </div>
+{% endblock %}

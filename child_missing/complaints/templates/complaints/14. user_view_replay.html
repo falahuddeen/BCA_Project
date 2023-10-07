@@ -1,0 +1,21 @@
+<html>
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<center>
+<h3>VIEW REPLAY</h3>
+<table border="2">
+	<tr>
+
+        <td>Complaint</td>
+        <td>Replay</td>
+	</tr>
+    {% for x in obval %}
+	<tr>
+    <td>{{ x.complaint }}</td>
+        <td>{{ x.replay }}</td>
+	</tr>
+     {% endfor %}
+</table>
+</center>
+{#{% endblock %}#}
+</html>
