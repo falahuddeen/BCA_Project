@@ -1,0 +1,35 @@
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<html>
+<center>
+<h3>INFORM MISSING PERSON</h3>
+<table border="2">
+	<tr>
+		<td>Name</td>
+		<td>Phone</td>
+		<td>Date</td>
+		<td>Image</td>
+		<td>Location</td>
+
+		<td>Status</td>
+
+		
+	</tr>
+    {% for x in obval %}
+	<tr>
+		<td>{{ x.name }}</td>
+		<td>{{ x.phone_number }}</td>
+		<td>{{ x.date }}</td>
+		<td><img src="/static/{{ x.image }}" width="100" height="80"></td>
+		<td>{{ x.location }}</td>
+
+		<td>{{ x.status }}</td>
+        		<td><a href="{% url 'inform' idd=x.mi_id %}">inform</a></td>
+
+		<td></td>
+	</tr>
+     {% endfor %}
+</table>
+</center>
+{#{% endblock %}#}
+</html>

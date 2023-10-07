@@ -1,0 +1,26 @@
+<html>
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<center>
+<h3>VIEW MISSING CASE</h3>
+<table border="2">
+	<tr>
+		<td>Name</td>
+		<td>Location</td>
+		<td>Phone</td>
+		<td>Image</td>
+		<td>Status</td>
+	</tr>
+    {% for x in obval5 %}
+	<tr>
+		<td>{{ x.name }}</td>
+		<td>{{ x.location }}</td>
+		<td>{{ x.phone_number }}</td>
+		<td><img src="/static/{{ x.image }}" width="50" height="40"></td>
+		<td>{{ x.status }}</td>
+	</tr>
+     {% endfor %}
+</table>
+</center>
+{#{% endblock %}#}
+</html>

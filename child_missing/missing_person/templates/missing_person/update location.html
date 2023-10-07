@@ -1,0 +1,41 @@
+{#{% extends 'temp/User home page.html' %}#}
+{#{% block base %}#}
+<html>
+{#<body style="background-color: #007aff"><#}
+<h1 align="center">
+        <b>Update Location</b>
+	</h1>
+    <form method="post">
+        {% csrf_token %}
+	<table  align="center">
+        {% for x in obval %}
+		<tr>
+			<td>
+				Case Name :
+			</td>
+			<td>
+				<input type="text" name="missingname"  value="{{ x.name }}" readonly>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Location :
+			</td>
+			<td>
+				<input type="text" name="missinglocation" required="" value="{{ x.location }}">
+			</td>
+		</tr>
+        {% endfor %}
+
+
+<td></td>
+
+    <td><input type="submit" name="submit" class="btn btn-success"></td>
+    </table>
+        </form>
+
+
+{#</body>#}
+{#{% endblock %}#}
+</html>

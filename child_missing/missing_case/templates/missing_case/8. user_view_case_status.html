@@ -1,0 +1,21 @@
+<html>
+    <center>
+    <div class="container">
+<h3>VIEW CASE STATUS</h3>
+<table border="2">
+	<tr>
+		<td>Case Name</td>
+		<td>Status</td>
+		<td>mi_id</td>
+	</tr>
+    {% for x in obval4 %}
+	<tr>
+		<td>{{ x.name }}</td>
+		<td>{{ x.status }}</td>
+		<td>{{ x.mi_id }}</td>
+	</tr>
+     {% endfor %}
+</table>
+</div>
+    </center>
+</html>

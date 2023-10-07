@@ -1,0 +1,91 @@
+{% extends 'temp/main home page.html' %}
+{% block base %}
+	<centere>
+        <h1><b>Police Registeration Form</b></h1>
+		<form method="post">
+            {% csrf_token %}
+			<table>
+				<tr>
+					<td>
+						Name : 
+					</td>
+					<td>
+						<input type="text" name="policename" required="">
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+				<tr>
+					<td>
+						Location : 
+					</td>
+					<td>
+						<input type="text" name="policelocation" required="">
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+				<tr>
+					<td>
+						Contact number : 
+					</td>
+					<td>
+						<input type="tel" name="policecontact" pattern="[0-9]{10}" required="">
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+				<tr>
+					<td>
+						E-mail : 
+					</td>
+					<td>
+						<input type="email" name="policeemail" required="">
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+				<tr>
+				    <td>
+						Password : 
+					</td>
+					<td>
+						<input type="password" name="policepassword" required="">
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+				<tr>
+					<td>
+						Confirm Password : 
+					</td>
+					<td>
+						<input type="text" name="policeconformpassword" required="">
+					</td>
+				</tr>
+			</table><br>
+			<input type="submit" name="policesubmit" class="btn-success" value="Register">
+		</form>
+	</centere>
+    {% if okk %}
+        <script>
+            alert("{{ okk }}")
+        </script>
+        {% endif %}
+
+{% endblock %}

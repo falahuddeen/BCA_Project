@@ -1,0 +1,28 @@
+{% extends 'temp/Police Station home page.html' %}
+{% block base %}
+    <h3><b>VIEW MISSING CASE</b></h3>
+<div class="container">
+<table align="center" class="table table-bordered text-center">
+	<tr>
+		<td>Name</td>
+		<td>Location</td>
+		<td>Phone</td>
+		<td>Image</td>
+		<td>Status</td>
+        <td>Verification</td>
+	</tr>
+    {% for x in obval3 %}
+	<tr>
+		<td>{{ x.name}}</td>
+		<td>{{ x.location }}</td>
+		<td>{{ x.phone_number }}</td>
+		<td><img src="/static/{{ x.image }}" height="30%" width="30%"></td>
+        <td>{{ x.status }}</td>
+    		<td><a href="{% url 'solve' idd=x.mi_id %}">Solve</a></td>
+
+	</tr>
+     {% endfor %}
+
+</table>
+</div>
+{% endblock %}

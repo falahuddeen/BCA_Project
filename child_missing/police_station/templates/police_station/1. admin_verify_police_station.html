@@ -1,0 +1,26 @@
+{% extends 'temp/Admin home page.html' %}
+{% block base %}
+    <h3><b>VERIFY POLICE STATION</b></h3>
+<div class="container">
+<table align="center" class="table table-bordered text-center">
+	<tr>
+		<td>Name</td>
+		<td>Location</td>
+		<td>Contact</td>
+		<td>E-mail</td>
+		<td></td>
+		<td></td>
+	</tr>
+    {% for x in obval %}
+	<tr>
+		<td>{{ x.name }}</td>
+		<td>{{ x.location }}</td>
+		<td>{{ x.contact_number }}</td>
+		<td>{{ x.e_mail }}</td>
+		<td class="btn btn-success"><a href="{% url 'accept' idd=x.po_id %}" >verify</a></td>
+		<td class="btn btn-success"><a href="{% url 'reject' idd=x.po_id %}">decline</a></td>
+	</tr>
+     {% endfor %}
+</table>
+    </div>
+{% endblock %}

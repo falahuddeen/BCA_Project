@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h3><b>MISSING CHILD CASE</b></h3>
+<table border="2">
+	<tr>
+		<td>Name</td>
+		<td>Location</td>
+		<td>Phone</td>
+		<td>Image</td>
+		<td>Status</td>
+        <td>Verification</td>
+	</tr>
+    {% for x in obval %}
+	<tr>
+		<td>{{ x.name}}</td>
+		<td>{{ x.location }}</td>
+		<td>{{ x.phone_number }}</td>
+		<td>{{ x.image }}</td>
+		<td>{{ x.status }}</td>
+        <td>{{ x.Verification }}</td>
+	</tr>
+     {% endfor %}
+</table>
+</body>
+</html>
