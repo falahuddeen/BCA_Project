@@ -1,3 +1,9 @@
+Missing child identification using RFID and CNN Face recognition
+
+ 
+
+
+
 1) After Downloading Rename the Folder "idea" to ".idea"
 2) And Extract the "static.rar" file (it include more than 100 file so can't upload directly as raw folder)
 and run using pycharm
