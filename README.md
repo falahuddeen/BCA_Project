@@ -1,0 +1,15 @@
+# Missing Child Identification Using RFID & Face Recognition (CNN)
+
+## Abstract
+<p> In India a countless number of children are reported missing every year. Among the missing child cases a large percentage of children remain untraced. This paper presents a novel use of deep learning methodology for identifying the reported missing child from the photos of multitude of children available, with the help of face recognition. The public can upload photographs of suspicious child into a common portal with landmarks and remarks. The photo will be automatically compared with the registered photos of the missing child from the repository. Classification of the input child image is performed and photo with best match will be selected from the database of missing children. For this, a deep learning model is trained to correctly identify the missing child from the missing child image database provided, using the facial image uploaded by the public. The Convolutional Neural Network (CNN), a highly effective deep learning technique for image-based applications is adopted here for face recognition. Face descriptors are extracted from the images using a pre-trained CNN model VGG-Face deep architecture. Compared with normal deep learning applications, our algorithm uses convolution network only as a high-level feature extractor and the child recognition is done by the trained SVM classifier. Choosing the best performing CNN model for face recognition, VGG-Face and proper training of it results in a deep learning model invariant to  noise, illumination, contrast, occlusion, image pose, and age of the child and it outperforms earlier methods in face recognition based missing child identification. The classification performance achieved for child identification system is 99.41%. It was evaluated on 43 Child cases. We also have a RFID tag embedded in the system for children to wear. if we have registered a missing case, it will also add an ad number. If any of the RFID scanners in the public domain reads a child's bag, it will be able to define the location of the child</p>
+
+## Introduction
+<p>India faces a critical issue of missing children, with an average of 174 children reported missing daily, half of whom remain untraced. Many go missing due to reasons like abduction, trafficking, or running away and may face exploitation. A proposed solution involves a virtual repository where recent photos of missing children, provided by parents or guardians, are stored. The public can upload photos of children in suspicious situations to aid identification. Advanced deep learning techniques address challenges like aging effects, poor image quality, and varying conditions in photos. Additionally, RFID tags worn by children can help locate them through public RFID scanners. This system offers a cost-effective, reliable tool for tracing missing children compared to other biometric methods.</p>
+
+## Certificate
+
+Here is the certificate for my project:
+
+![Certificate Image](https://github.com/falahuddeen/BCA_Project/blob/main/BCA_Main_Certificate.JPG?raw=true)
+
+You can also view the project code and other details in the repository.
